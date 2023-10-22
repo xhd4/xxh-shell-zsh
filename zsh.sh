@@ -1,8 +1,12 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 CDIR="$(cd "$(dirname "$0")" && pwd)"
 
-zshbin='zsh-bin'
+platform=$(uname | tr '[:upper:]' '[:lower:]')
+arch=$(uname -m)
+bin_arch="${platform}-${arch}"
+  
+zshbin="zsh-bin/${bin_arch}"
 
 zsh_dir=''
 if [ -f $CDIR/.zsh_dir ]; then
