@@ -24,7 +24,7 @@ done
 cp $CDIR/zshrc $build_dir/.zshrc
 
 # tag=$(curl --silent https://api.github.com/repos/romkatv/zsh-bin/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
-tag=v3.0.1
+tag=v6.1.1
 platform=$(uname | tr '[:upper:]' '[:lower:]')
 arch=$(uname -m)
 distfile=zsh-5.8-$platform-$arch
